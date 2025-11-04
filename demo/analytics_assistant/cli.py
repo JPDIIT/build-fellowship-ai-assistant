@@ -162,7 +162,7 @@ Ask questions about your CSV data in natural language!
         elif cmd == "/load":
             if len(parts) < 3:
                 self.console.print("[red]Usage: /load <path> <alias>[/red]")
-                self.console.print("[yellow]Example: /load data/sales.csv sales[/yellow]")
+                self.console.print("[yellow]Example: /load data/food.csv sales[/yellow]")
                 return
 
             file_path = parts[1]

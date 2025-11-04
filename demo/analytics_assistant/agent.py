@@ -54,7 +54,7 @@ class DataAnalyticsAgent:
     Example:
         >>> from openai import OpenAI
         >>> agent = DataAnalyticsAgent(OpenAI(), max_iterations=10)
-        >>> result = agent.run("Load sales.csv and show me the top 5 products by revenue")
+        >>> result = agent.run("Load food.csv and show me the top 5 products by revenue")
         >>> print(result["answer"])
     """
 

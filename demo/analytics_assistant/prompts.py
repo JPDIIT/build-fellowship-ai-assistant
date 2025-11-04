@@ -139,7 +139,7 @@ When you have completed all necessary actions and can answer the user's query, u
 ## Examples
 
 Example 1: Loading data (DETERMINISTIC - 2 iterations)
-User: "Load sales.csv as sales"
+User: "Load food.csv as sales"
 
 Turn 1 - Load the file:
 ```json
@@ -147,7 +147,7 @@ Turn 1 - Load the file:
   "thought": "This is a DETERMINISTIC query (specific load command). I'll load the CSV file using load_csv.",
   "action": "load_csv",
   "parameters": {{
-    "file_path": "sales.csv",
+    "file_path": "food.csv",
     "alias": "sales"
   }}
 }}
@@ -159,7 +159,7 @@ After load_csv returns success (with dataset info: 1000 rows, 5 columns), Turn 2
   "thought": "The CSV file loaded successfully. The load_csv tool already returned complete dataset info (rows, columns, sample data). No inspection needed - I can confirm completion immediately.",
   "action": "DONE",
   "parameters": {{
-    "answer": "Successfully loaded 'sales.csv' as 'sales'.\n\nDataset Info:\n- 1,000 rows\n- 5 columns: product_id, product_name, category, price, quantity\n\nThe dataset is now loaded and ready for analysis."
+    "answer": "Successfully loaded 'food.csv' as 'sales'.\n\nDataset Info:\n- 1,000 rows\n- 5 columns: product_id, product_name, category, price, quantity\n\nThe dataset is now loaded and ready for analysis."
   }}
 }}
 ```

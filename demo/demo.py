@@ -52,8 +52,8 @@ def setup_llm_client(provider: str = "openai") -> tuple:
 def check_data_files() -> bool:
     """Check if demo data files exist."""
     data_dir = Path(__file__).parent / "data"
-    sales_file = data_dir / "ecommerce_sales.csv"
-    customers_file = data_dir / "customers.csv"
+    sales_file = data_dir / "food.csv"
+    customers_file = data_dir / "food.csv"
 
     if not sales_file.exists() or not customers_file.exists():
         console.print("[red]Error: Demo data files not found![/red]")
@@ -153,7 +153,7 @@ def run_quick_demo():
     )
     run_query_with_feedback(
         agent,
-        f"Load the CSV file at '{data_dir / 'ecommerce_sales.csv'}' with alias 'sales'"
+        f"Load the CSV file at '{data_dir / 'food.csv'}' with alias 'sales'"
     )
 
     time.sleep(1)
@@ -233,7 +233,7 @@ def run_full_demo():
 
     run_query_with_feedback(
         agent,
-        f"Load '{data_dir / 'ecommerce_sales.csv'}' as 'sales' and '{data_dir / 'customers.csv'}' as 'customers'"
+        f"Load '{data_dir / 'food.csv'}' as 'sales' and '{data_dir / 'food.csv'}' as 'customers'"
     )
 
     time.sleep(1)
